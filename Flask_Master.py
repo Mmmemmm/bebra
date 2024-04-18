@@ -14,6 +14,17 @@ def contacts():
     #Контекст - те данные, которые мы передаем из контроллера в шаблон
     return render_template('contacts.html', name = developer_name, phone=devoloper_phone,address = developer_adress)
 
+@app.route("/information/")
+def information():
+    #Где то взяли данные
+    site_info='Это первый тестовый сайт на Flask'
+    return render_template('information.html', info = site_info)
+
+@app.route("/donate/")
+def donate():
+    #Где то взяли данные
+    donate='https://www.donationalerts.com/r/tabikriki'
+    return render_template('donate.html', donate = donate)
 
 
 if __name__ == "__main__":
